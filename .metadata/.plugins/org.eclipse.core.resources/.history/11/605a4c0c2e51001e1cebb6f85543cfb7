@@ -1,0 +1,14 @@
+Feature: Logout from the application
+
+@sanity @regression
+  Scenario: Logout from the application
+  Background:
+  user is logged into the application
+
+    Given User is on Login page 
+    When User navigate to MyAccount menu
+    And click on Logout option
+    And Click on Continue button
+    Then User navigates to MyAccount Page
+    
+    

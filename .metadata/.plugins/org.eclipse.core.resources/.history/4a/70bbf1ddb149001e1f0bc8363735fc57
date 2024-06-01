@@ -1,0 +1,5 @@
+package democart_Cucumber.stepDefinitions;
+
+public class ProductDetails {
+
+}

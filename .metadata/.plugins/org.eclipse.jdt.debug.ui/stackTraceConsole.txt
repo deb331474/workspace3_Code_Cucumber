@@ -1,0 +1,6 @@
+org.junit.ComparisonFailure: expected:<[Customer 'Debasish6234g67f' has been deleted]> but was:<["Customer 'Debasish6234g67f' has been deleted"]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.DeleteCustomerStepDefinitions.i_get_the_confirmation_message(DeleteCustomerStepDefinitions.java:57)
+	at ?.I get the Confirmation Message "Customer 'Debasish6234g67f' has been deleted"(file:///C:/Users/Debasish/eclipse-workspace_3/CucumberPractice/./features/DeleteCustomer.feature:8)
+

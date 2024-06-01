@@ -1,0 +1,34 @@
+package democart_Cucumber.stepDefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class ProductDetails {
+	
+	@Given("user is logged in")
+	public void user_is_logged_in() {
+	   
+	}
+
+	@Given("user is on the My account page")
+	public void user_is_on_the_my_account_page() {
+	    
+	}
+
+	@When("user clicks on the components menu")
+	public void user_clicks_on_the_components_menu() {
+	    
+	}
+
+	@When("user clicks on the Monitor link")
+	public void user_clicks_on_the_monitor_link() {
+	   
+	}
+
+	@Then("product Details page appear")
+	public void product_details_page_appear() {
+	    
+	}
+
+}

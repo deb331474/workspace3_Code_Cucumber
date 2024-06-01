@@ -1,0 +1,9 @@
+Feature: Product details page for monitors
+
+  @Sanity
+  Scenario: get the list of products under Monitor link
+    Given user is logged in
+    And user is on the My account page
+    When user clicks on the components menu
+    And user clicks on the Monitor link
+    Then product Details page appear

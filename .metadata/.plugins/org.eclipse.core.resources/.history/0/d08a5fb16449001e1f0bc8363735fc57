@@ -1,0 +1,11 @@
+Feature: Login with valid credentials
+
+  @Sanity
+  Scenario: Successful login with valid credentials
+    Given user is logged in
+    And user is on the My account page
+    when user clicks on the componenents menu
+    And navigate to MyAccount menu
+    And clicks on the Login link
+    And user enters Email as "prusethdebasish@gmail.com" and Password as "Debudon@211"
+    And clicks on the Login button

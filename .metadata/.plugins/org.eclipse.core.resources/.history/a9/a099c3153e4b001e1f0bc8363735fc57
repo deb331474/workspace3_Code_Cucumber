@@ -1,0 +1,105 @@
+package democart_Cucumber.stepDefinitions;
+
+import java.time.Duration;
+import java.util.ResourceBundle;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import democart_Cucumber.pageObject.HomePage;
+import democart_Cucumber.pageObject.LogInPage;
+import democart_Cucumber.pageObject.MonitorDetailsPage;
+import democart_Cucumber.pageObject.MyAccountPage;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class ProductDetails {
+	
+	WebDriver driver;
+    HomePage hp;
+    LogInPage lp;
+    MyAccountPage macc;
+    MonitorDetailsPage mdp;
+    Logger logger; //for logging
+    ResourceBundle rb; // for reading properties file
+    String br; //to store browser name
+    
+    @Before
+    public void setup()    //Junit hook - executes once before starting
+    {
+    	rb=ResourceBundle.getBundle("config");
+		logger=LogManager.getLogger(this.getClass());
+
+		if (br.equals("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			driver = new ChromeDriver(options);
+			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+
+		} else if (br.equals("edge")) {
+			driver = new EdgeDriver();
+		}
+		else {
+			driver=new FirefoxDriver();
+		}
+
+		logger = LogManager.getLogger(this.getClass());
+
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
+		driver.manage().window().maximize();
+     
+    }
+
+   @After
+   public void tearDown(Scenario scenario) {
+       System.out.println("Scenario status ======>"+scenario.getStatus());
+       if(scenario.isFailed()) {
+       	
+       	TakesScreenshot ts=(TakesScreenshot) driver;
+       	byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
+       	scenario.attach(screenshot, "image/png",scenario.getName());
+       	            
+       }
+      driver.quit();
+   }
+	
+	@Given("user is logged in")
+	public void user_is_logged_in() {
+		
+	       
+	}
+
+	@Given("user is on the My account page")
+	public void user_is_on_the_my_account_page() {
+	    
+	}
+
+	@When("user clicks on the components menu")
+	public void user_clicks_on_the_components_menu() {
+	    
+	}
+
+	@When("user clicks on the Monitor link")
+	public void user_clicks_on_the_monitor_link() {
+	   
+	}
+
+	@Then("product Details page appear")
+	public void product_details_page_appear() {
+	    
+	}
+
+}

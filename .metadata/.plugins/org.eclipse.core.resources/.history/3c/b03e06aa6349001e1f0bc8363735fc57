@@ -1,0 +1,10 @@
+Feature: Login with valid credentials
+
+  @Sanity
+  Scenario: Successful login with valid credentials
+    Given user launches the browser
+    And opens URL "http://localhost/opencartsuite/index.php?"
+    When user navigate to MyAccount menu
+    And clicks on the Login link
+    And user enters Email as "prusethdebasish@gmail.com" and Password as "Debudon@211"
+    And clicks on the Login button

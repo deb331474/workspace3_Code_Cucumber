@@ -1,0 +1,32 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class CreateTimeBalanceReportsPage {
+	
+	public WebDriver driver;
+
+	public CreateTimeBalanceReportsPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	By reportLink=By.cssSelector(".content.reports");
+	By timeBlnLink=By.xpath("//span[contains(text(),'Time Balance')]");
+	By dateRangeDropdown=By.cssSelector(".middle-left-cell.contents.customRightPart");
+	By dataGropuingUsersdropDwn=By.cssSelector("#ext-gen40");
+	By dataGroupingGroupingLevel=By.cssSelector("#ext-gen49");
+	By selectedStaffdrpDwn=By.cssSelector("#ext-gen59");
+	By reportColumnChkBox=By.cssSelector(".showWorkingAndLeaveTimeSection.withoutColumnsConfig");
+	By timeFormatdrpDwn=By.cssSelector("#ext-comp-1027");
+	By tooltipText=By.cssSelector("#timeFormatInfo");
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

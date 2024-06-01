@@ -1,0 +1,49 @@
+package pageObjects;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class CreateTimeBalanceReportsPage {
+	
+	public WebDriver driver;
+	public WebDriverWait wait;
+
+	public CreateTimeBalanceReportsPage(WebDriver driver) {
+		this.driver = driver;
+		this.wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+	}
+	
+	By reportLink=By.cssSelector(".content.reports");
+	By timeBlnLink=By.xpath("//span[contains(text(),'Time Balance')]");
+	By dateRangeDropdown=By.cssSelector(".middle-left-cell.contents.customRightPart");
+	By dataGropuingUsersdropDwn=By.cssSelector("#ext-gen40");
+	By dataGroupingGroupingLevel=By.cssSelector("#ext-gen49");
+	By selectedStaffdrpDwn=By.cssSelector("#ext-gen59");
+	By reportColumnChkBox=By.cssSelector(".showWorkingAndLeaveTimeSection.withoutColumnsConfig");
+	By timeFormatdrpDwn=By.cssSelector("#ext-comp-1027");
+	By tooltipText=By.cssSelector("#timeFormatInfo");
+	
+	
+	public void clickonReportTab() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(reportLink));
+		driver.findElement(reportLink).click();
+	}
+	
+	public void clickonTimeBalanceLink() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(timeBlnLink));
+		driver.findElement(timeBlnLink).click();
+	}
+	
+	+
+	
+	
+	
+	
+	
+
+}

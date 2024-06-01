@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PageObjectManager.java&apos; to &apos;CucumberPractice/src/test/java/pageObjects&apos;&#x0D;&#x0A;- Original project: &apos;CucumberFramework&apos;&#x0D;&#x0A;- Destination element: &apos;CucumberPractice/src/test/java/pageObjects&apos;&#x0D;&#x0A;- Original element: &apos;pageObjects.PageObjectManager.java&apos;" description="Copy compilation unit" destination="=CucumberPractice/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;pageObjects" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;pageObjects{PageObjectManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1694672082865" units="1" version="1.0"/>
+</session>
